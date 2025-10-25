@@ -82,11 +82,13 @@ public:
 };
 
 int main() {
-    Vector<double, 3> v1, v2;
+    Vector<double,3> v1, v2;
     cin >> v1 >> v2;
 
-    if (auto angle = v1.degree(v2))
-        cout << "Angle: " << *angle << " degrees\n";
+    if (auto angle = v1.radian(v2))
+        cout << "Angle: " <<angle << " degrees\n";
+        
+        
     else
         cout << "Angle undefined (one of the vectors is zero)\n";
 }
